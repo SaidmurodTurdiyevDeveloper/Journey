@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/region_andijon"
+            android:title="@string/text_andijon" />
+        <item
+            android:id="@+id/region_namangan"
+            android:title="@string/text_namangan" />
+        <item
+            android:id="@+id/region_fergana"
+            android:title="@string/text_fergana" />
+        <item
+            android:id="@+id/region_tashkent"
+            android:title="@string/text_tashkent" />
+        <item
+            android:id="@+id/region_sirdaryo"
+            android:title="@string/text_sirdaryo" />
+        <item
+            android:id="@+id/region_jizzakh"
+            android:title="@string/text_jizzakh" />
+        <item
+            android:id="@+id/region_samarand"
+            android:title="@string/text_samarkand" />
+        <item
+            android:id="@+id/region_qashqadaro"
+            android:title="@string/text_qashqadaro" />
+        <item
+            android:id="@+id/region_surkhandaryo"
+            android:title="@string/text_surkhandaryo" />
+        <item
+            android:id="@+id/region_navoi"
+            android:title="@string/text_navoi" />
+        <item
+            android:id="@+id/region_bukhara"
+            android:title="@string/text_bukhara" />
+        <item
+            android:id="@+id/region_khorazm"
+            android:title="@string/text_khorazm" />
+        <item
+            android:id="@+id/region_qorqalpoq"
+            android:title="@string/text_qoraqalpoq" />
+    </group>
+
+</menu>

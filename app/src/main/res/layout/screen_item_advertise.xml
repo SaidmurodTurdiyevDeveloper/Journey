@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/mainImage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="12dp"
+            android:contentDescription="@string/image_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@id/imageTwo"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Rectangle" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageTwo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/image_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/imageThree"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/mainImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Rectangle" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageThree"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="4dp"
+            android:contentDescription="@string/image_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/imageFour"
+            app:layout_constraintEnd_toEndOf="@id/imageTwo"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/imageTwo"
+            app:layout_constraintTop_toBottomOf="@id/imageTwo"
+            app:shapeAppearanceOverlay="@style/Rectangle" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageFour"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/image_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageThree"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/imageThree"
+            app:layout_constraintTop_toBottomOf="@id/imageThree"
+            app:shapeAppearanceOverlay="@style/Rectangle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
