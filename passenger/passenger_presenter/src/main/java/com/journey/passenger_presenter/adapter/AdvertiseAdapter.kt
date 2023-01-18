@@ -11,11 +11,15 @@ import com.journey.passenger_presenter.screen.home.FragmentItemAdvertise
 /**
  * Created by Saidmurod Turdiyev (S.M.T) on 12/5/2022.
  */
-class AdvertiseAdapter(activity: FragmentActivity, private val list: List<ImagesAdvertise>) : FragmentStateAdapter(activity) {
+class AdvertiseAdapter(
+    activity: FragmentActivity,
+    private val list: List<ImagesAdvertise>,
+    private var listener: (Int?) -> Unit
+) : FragmentStateAdapter(activity) {
     override fun getItemCount(): Int = list.size
 
     override fun createFragment(position: Int): Fragment {
-        return FragmentItemAdvertise().putArguments {
+        return FragmentItemAdvertise(listener = listener).putArguments {
             putParcelable(Constants.MOVE_DATA, list[position])
         }
     }

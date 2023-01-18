@@ -38,5 +38,11 @@
     <string name="text_bluetooth">Bluetooth</string>
     <string name="text_connect_device">Qurilmani bog`lash</string>
 
+    <string name="text_error">Xatolik</string>
+    <string name="text_error_message">Xatolik yuz berdi</string>
+    <string name="text_Close">Yopmoq</string>
+    <string name="text_Yes">Ha</string>
+    <string name="text_No">Yo`q</string>
+    <string name="text_Ok">Ok</string>
 
 </resources>

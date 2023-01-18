@@ -19,7 +19,7 @@ class JourneyAdapter(private var resources:Resources) : RecyclerView.Adapter<Jou
     private var differ = AsyncListDiffer(this, ITEM_DIFF)
     private var defaultList: List<JourneyData> = emptyList()
     private var itemSelect: sendOneParametreBlock<Int>? = null
-    fun submitList(ls: ArrayList<JourneyData>) {
+    fun submitList(ls: List<JourneyData>) {
         differ.submitList(ls.toMutableList())
         defaultList = differ.currentList
     }

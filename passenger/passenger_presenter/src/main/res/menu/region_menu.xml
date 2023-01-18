@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/region_andijon"
-            android:title="@string/text_andijon" />
+            android:id="@+id/region_andijan"
+            android:title="@string/text_andijan" />
         <item
             android:id="@+id/region_namangan"
             android:title="@string/text_namangan" />
@@ -14,20 +14,20 @@
             android:id="@+id/region_tashkent"
             android:title="@string/text_tashkent" />
         <item
-            android:id="@+id/region_sirdaryo"
-            android:title="@string/text_sirdaryo" />
+            android:id="@+id/region_sirdarya"
+            android:title="@string/text_sirdarya" />
         <item
             android:id="@+id/region_jizzakh"
             android:title="@string/text_jizzakh" />
         <item
-            android:id="@+id/region_samarand"
+            android:id="@+id/region_samarkand"
             android:title="@string/text_samarkand" />
         <item
-            android:id="@+id/region_qashqadaro"
-            android:title="@string/text_qashqadaro" />
+            android:id="@+id/region_kashkadarya"
+            android:title="@string/text_kashkadarya" />
         <item
-            android:id="@+id/region_surkhandaryo"
-            android:title="@string/text_surkhandaryo" />
+            android:id="@+id/region_surkhandarya"
+            android:title="@string/text_surkhandarya" />
         <item
             android:id="@+id/region_navoi"
             android:title="@string/text_navoi" />
@@ -35,11 +35,11 @@
             android:id="@+id/region_bukhara"
             android:title="@string/text_bukhara" />
         <item
-            android:id="@+id/region_khorazm"
-            android:title="@string/text_khorazm" />
+            android:id="@+id/region_khorezm"
+            android:title="@string/text_khorezm" />
         <item
-            android:id="@+id/region_qorqalpoq"
-            android:title="@string/text_qoraqalpoq" />
+            android:id="@+id/region_karakalpak"
+            android:title="@string/text_karakalpak" />
     </group>
 
 </menu>

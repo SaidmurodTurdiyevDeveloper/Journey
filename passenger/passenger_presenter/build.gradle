@@ -65,6 +65,9 @@ dependencies {
     implementation ViewBinding.delegate
     implementation ViewBinding.noreflection
 
+    //Image loader
+    implementation ImageLoader.glide
+    annotationProcessor ImageLoader.glide_compiler
     //Coroutines
     implementation Coroutine.core
     implementation Coroutine.android

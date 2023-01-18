@@ -37,12 +37,6 @@ class ViewModelPlace @Inject constructor(private val useCase: PlaceUseCase) : Vi
                 }
             }
 
-            is PlaceEvent.GetPlace -> {
-                viewModelScope.launch {
-                    _place.value = useCase.getPlace(event.id)
-                }
-            }
-
             PlaceEvent.LoadPlaceWithType -> {
                 viewModelScope.launch {
                     when (val result = useCase.getPlacesListWithType()) {
@@ -55,6 +49,17 @@ class ViewModelPlace @Inject constructor(private val useCase: PlaceUseCase) : Vi
                             _placesWithType.value = result.data
                         }
                     }
+                }
+            }
+            is PlaceEvent.GetPlace -> {
+                viewModelScope.launch {
+                    _place.value = useCase.getPlace(event.id)
+                }
+            }
+
+            is PlaceEvent.LoadAllPlaceWithType ->{
+                viewModelScope.launch {
+                    _places.value = useCase.getPlacesList(event.type)
                 }
             }
         }

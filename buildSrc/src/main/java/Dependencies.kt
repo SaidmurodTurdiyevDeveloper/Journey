@@ -176,11 +176,14 @@ object Navigation {
 }
 
 object ImageLoader {
+    //implementation
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val glide_annotation = "com.github.bumptech.glide:annotations:${Versions.glide}"
     const val glide_integration = "com.github.bumptech.glide:okhttp3-integration:${Versions.glide}"
-    const val glide_compiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
     const val picasso = "com.squareup.picasso:picasso:${Versions.picasso}"
+
+    //annotationProcessor
+    const val glide_compiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
 }
 
 object Coroutine {

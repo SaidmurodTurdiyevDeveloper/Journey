@@ -20,26 +20,6 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object CommonDataModule {
 
-//    @Provides
-//    @Singleton
-//    fun providesDefaultLocalStore(
-//        @ApplicationContext context: Context
-//    ): DefaultRegionList {
-//        return DefaultRegionList(context)
-//    }
-//
-//    @Provides
-//    @Singleton
-//    fun provideDefaultAdvertiseList(): DefaultAdvertiseList {
-//        return DefaultAdvertiseList()
-//    }
-//
-//    @Provides
-//    @Singleton
-//    fun provideDefaultPlaceList(@ApplicationContext context: Context): DefaultPlaceList {
-//        return DefaultPlaceList(context)
-//    }
-
     @Provides
     @Singleton
     fun provideSharedDatabase(@ApplicationContext context: Context): SharedDatabase =

@@ -8,9 +8,11 @@ import com.journey.passenger_domen.useCase.*
 import com.journey.passenger_domen.useCase.model.AdvertiseUseCase
 import com.journey.passenger_domen.useCase.model.JourneyUseCase
 import com.journey.passenger_domen.useCase.model.PlaceUseCase
+import com.journey.passenger_domen.useCase.model.RegionUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -18,11 +20,10 @@ import javax.inject.Singleton
  * Created by Saidmurod Turdiyev (S.M.T) on 1/25/2023.
  */
 @Module
-@InstallIn(SingletonComponent::class)
+@InstallIn(ViewModelComponent::class)
 object PassengerUseCaseModule {
 
     @Provides
-    @Singleton
     fun provideAdvertiseUseCase(
         repositoryAdvertise: AdvertiseRepository
     ): AdvertiseUseCase {
@@ -37,7 +38,6 @@ object PassengerUseCaseModule {
     }
 
     @Provides
-    @Singleton
     fun provideJourneyUseCase(
         repositoryJourney: JourneyRepository,
         repositoryPlace: PlaceRepository
@@ -52,7 +52,7 @@ object PassengerUseCaseModule {
             ),
             updateJourney = UpdateJourney(
                 repositoryJourney = repositoryJourney,
-                repositoryPlace=repositoryPlace
+                repositoryPlace = repositoryPlace
             ),
             deleteJourney = DeleteJourney(
                 repositoryJourney = repositoryJourney,
@@ -66,7 +66,6 @@ object PassengerUseCaseModule {
     }
 
     @Provides
-    @Singleton
     fun providePlaceUseCase(
         repositoryPlace: PlaceRepository,
         repositoryRegion: RegionRepository
@@ -76,10 +75,25 @@ object PassengerUseCaseModule {
                 repository = repositoryPlace
             ),
             getPlacesList = GetPlacesList(
-                repositoryPlace = repositoryPlace
+                repositoryPlace = repositoryPlace,
+                repositoryRegion = repositoryRegion
             ),
             getPlacesListWithType = GetPlacesListWithType(
                 repositoryPlace = repositoryPlace,
+                repositoryRegion = repositoryRegion
+            )
+        )
+    }
+
+    @Provides
+    fun provideRegionUseCase(
+        repositoryRegion: RegionRepository
+    ): RegionUseCase {
+        return RegionUseCase(
+            getRegion = GetCurrentRegion(
+                repositoryRegion = repositoryRegion
+            ),
+            setRegion = SetCurrentRegion(
                 repositoryRegion = repositoryRegion
             )
         )

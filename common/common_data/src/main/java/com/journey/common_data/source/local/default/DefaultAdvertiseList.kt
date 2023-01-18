@@ -9,15 +9,15 @@ import com.journey.common_data.module.AdvertiseDTO
 class DefaultAdvertiseList() {
     private var list = ArrayList<AdvertiseDTO>()
     fun getList(): List<AdvertiseDTO> {
-        return list
+        return ArrayList<AdvertiseDTO>(list)
     }
 
     init {
-//        repeat(4) {
-//            list.add(AdvertiseDTO(list.size, "advertise", "advertise", R.drawable.advertise, emptyList()))
-//        }
-//        repeat(4) {
-//            list.add(AdvertiseDTO(list.size, "advertise", "advertise", R.drawable.advertise, arrayListOf(R.drawable.advertise, R.drawable.advertise, R.drawable.advertise, R.drawable.advertise)))
-//        }
+        repeat(4) {
+            list.add(AdvertiseDTO(list.size, "advertise", "advertise", R.drawable.advertise, emptyList()))
+        }
+        repeat(4) {
+            list.add(AdvertiseDTO(list.size, "advertise", "advertise", R.drawable.advertise, arrayListOf(R.drawable.advertise, R.drawable.advertise, R.drawable.advertise, R.drawable.advertise)))
+        }
     }
 }

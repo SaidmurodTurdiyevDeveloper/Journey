@@ -1,5 +1,6 @@
 package com.journey.passenger_presenter.model
 
+import com.journey.common_utils.other.type.Type
 import com.journey.passenger_presenter.viewModel.ViewModelPlace
 
 /**
@@ -7,6 +8,7 @@ import com.journey.passenger_presenter.viewModel.ViewModelPlace
  */
 sealed class PlaceEvent{
     data class GetPlace(val id:Int):PlaceEvent()
+    data class LoadAllPlaceWithType(val type:Type) :PlaceEvent()
     object LoadPlaceWithType :PlaceEvent()
     object LoadAllPlace :PlaceEvent()
 }

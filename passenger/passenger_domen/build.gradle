@@ -35,6 +35,7 @@ android {
 dependencies {
     implementation project(":passenger:passenger_data")
     implementation project(":common:common_data")
+    implementation project(":common:common_utils")
 
     implementation Deps.core
     implementation Deps.app_compat

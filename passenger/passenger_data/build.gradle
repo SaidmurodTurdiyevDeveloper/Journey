@@ -34,7 +34,7 @@ android {
 
 dependencies {
     implementation project(":common:common_data")
-//    implementation project(":passenger:passenger_domen")
+    implementation project(":common:common_utils")
 
     implementation Deps.core
     implementation Deps.app_compat

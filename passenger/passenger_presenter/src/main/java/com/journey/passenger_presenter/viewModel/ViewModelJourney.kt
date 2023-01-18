@@ -49,6 +49,9 @@ class ViewModelJourney @Inject constructor(private val useCase: JourneyUseCase) 
                     }
                 }
             }
+            JourneyEvent.DeleteJourneyList -> {
+                
+            }
 
             is JourneyEvent.DeleteJourney -> {
                 viewModelScope.launch {

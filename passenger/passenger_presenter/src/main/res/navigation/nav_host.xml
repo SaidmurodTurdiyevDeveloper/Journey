@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_host"
     app:startDestination="@id/home_screen">
 
     <fragment
         android:id="@+id/home_screen"
         android:name="com.journey.passenger_presenter.screen.home.ScreenHome"
-        android:label="ScreenHome" >
+        android:label="ScreenHome"
+        tools:layout="@layout/screen_home">
         <action
             android:id="@+id/action_home_screen_to_screenSearch"
             app:destination="@id/screenSearch" />
@@ -21,35 +23,47 @@
     <fragment
         android:id="@+id/journey_screen"
         android:name="com.journey.passenger_presenter.screen.journey.ScreenJourney"
-        android:label="ScreenJourney" />
+        android:label="ScreenJourney"
+        tools:layout="@layout/screen_journey" />
     <fragment
         android:id="@+id/screenAbout"
         android:name="com.journey.passenger_presenter.screen.setting.ScreenAbout"
-        android:label="ScreenAbout" />
+        android:label="ScreenAbout"
+        tools:layout="@layout/screen_about" />
     <fragment
         android:id="@+id/screenConnectionBluetooth"
         android:name="com.journey.passenger_presenter.screen.setting.ScreenConnectionBluetooth"
-        android:label="ScreenConnectionBluetooth" />
+        android:label="ScreenConnectionBluetooth"
+        tools:layout="@layout/screen_connection_bluetooth" />
     <fragment
         android:id="@+id/screenHelp"
         android:name="com.journey.passenger_presenter.screen.setting.ScreenHelp"
-        android:label="ScreenHelp" />
+        android:label="ScreenHelp"
+        tools:layout="@layout/screen_help" />
     <fragment
         android:id="@+id/screenLanguage"
         android:name="com.journey.passenger_presenter.screen.setting.ScreenLanguage"
-        android:label="ScreenLanguage" />
+        android:label="ScreenLanguage"
+        tools:layout="@layout/screen_language" />
     <fragment
         android:id="@+id/screenPlace"
         android:name="com.journey.passenger_presenter.screen.home.ScreenPlace"
-        android:label="ScreenPlace" />
+        android:label="ScreenPlace"
+        tools:layout="@layout/screen_place" />
     <fragment
         android:id="@+id/screenSearch"
         android:name="com.journey.passenger_presenter.screen.home.ScreenSearch"
-        android:label="ScreenSearch" />
+        android:label="ScreenSearch"
+        tools:layout="@layout/screen_search" >
+        <action
+            android:id="@+id/action_screenSearch_to_screenPlace"
+            app:destination="@id/screenPlace" />
+    </fragment>
     <fragment
         android:id="@+id/setting_screen"
         android:name="com.journey.myjourney.ui.screen.setting.ScreenSetting"
-        android:label="ScreenSetting" >
+        android:label="ScreenSetting"
+        tools:layout="@layout/screen_setting">
         <action
             android:id="@+id/action_setting_screen_to_screenLanguage"
             app:destination="@id/screenLanguage" />
@@ -66,9 +80,15 @@
     <fragment
         android:id="@+id/service_screen"
         android:name="com.journey.passenger_presenter.screen.service.ServiceScreen"
-        android:label="ServiceScreen" />
+        android:label="ServiceScreen"
+        tools:layout="@layout/screen_service" />
     <fragment
         android:id="@+id/screenPlaceWithType"
         android:name="com.journey.passenger_presenter.screen.home.ScreenPlaceWithType"
-        android:label="ScreenPlaceWithType" />
+        android:label="ScreenPlaceWithType"
+        tools:layout="@layout/screen_places_with_type" >
+        <action
+            android:id="@+id/action_screenPlaceWithType_to_screenPlace"
+            app:destination="@id/screenPlace" />
+    </fragment>
 </navigation>

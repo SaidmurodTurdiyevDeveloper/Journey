@@ -3,7 +3,7 @@ package com.journey.common_data.source.local.default
 import android.content.Context
 import com.journey.common_data.R
 import com.journey.common_data.module.PlaceDTO
-import com.journey.common_data.module.TYPE
+import com.journey.common_utils.other.type.Type
 import kotlin.random.Random
 
 /**
@@ -27,7 +27,7 @@ class DefaultPlaceList  (private val context: Context) {
                     arrayListOf<Int>(R.drawable.registon, R.drawable.tilla_kori, R.drawable.sherdor, R.drawable.mirzo_ulugbek),
                     R.drawable.registon,
                     Random.nextInt(12),
-                    TYPE.NEAR_RIVER
+                    Type.NEAR_RIVER
                 )
             )
         }
@@ -41,7 +41,7 @@ class DefaultPlaceList  (private val context: Context) {
                     arrayListOf<Int>(R.drawable.registon, R.drawable.tilla_kori, R.drawable.sherdor, R.drawable.mirzo_ulugbek),
                     R.drawable.registon,
                     Random.nextInt(12),
-                    TYPE.HISTORICAL_BUILDING
+                    Type.HISTORICAL_BUILDING
                 )
             )
         }
@@ -55,7 +55,7 @@ class DefaultPlaceList  (private val context: Context) {
                     arrayListOf<Int>(R.drawable.registon, R.drawable.tilla_kori, R.drawable.sherdor, R.drawable.mirzo_ulugbek),
                     R.drawable.registon,
                     Random.nextInt(12),
-                    TYPE.NEAR_MOUNTAIN
+                    Type.NEAR_MOUNTAIN
                 )
             )
         }
@@ -69,7 +69,7 @@ class DefaultPlaceList  (private val context: Context) {
                     arrayListOf<Int>(R.drawable.registon, R.drawable.tilla_kori, R.drawable.sherdor, R.drawable.mirzo_ulugbek),
                     R.drawable.registon,
                     Random.nextInt(12),
-                    TYPE.RESERVE
+                    Type.RESERVE
                 )
             )
         }
@@ -83,7 +83,7 @@ class DefaultPlaceList  (private val context: Context) {
                     arrayListOf(R.drawable.registon, R.drawable.tilla_kori, R.drawable.sherdor, R.drawable.mirzo_ulugbek),
                     R.drawable.registon,
                     Random.nextInt(12),
-                    TYPE.LANDSCAPE
+                    Type.LANDSCAPE
                 )
             )
         }
@@ -97,7 +97,7 @@ class DefaultPlaceList  (private val context: Context) {
                     arrayListOf<Int>(R.drawable.registon, R.drawable.tilla_kori, R.drawable.sherdor, R.drawable.mirzo_ulugbek),
                     R.drawable.registon,
                     Random.nextInt(12),
-                    TYPE.SHRINE
+                    Type.SHRINE
                 )
             )
         }
