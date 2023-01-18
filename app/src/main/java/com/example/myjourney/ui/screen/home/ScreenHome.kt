@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
+import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.core.view.GravityCompat
@@ -18,6 +19,7 @@ import com.example.myjourney.data.model.TYPE
 import com.example.myjourney.databinding.ScreenHomeBinding
 import com.example.myjourney.other.Constants
 import com.example.myjourney.other.StateViewModel
+import com.example.myjourney.other.extention.showToast
 import com.example.myjourney.ui.adapter.AdvertiseAdapter
 import com.example.myjourney.ui.adapter.PlacesAdapter
 import com.example.myjourney.ui.viewModel.AdvertiseViewModel
@@ -94,42 +96,106 @@ class ScreenHome : Fragment(R.layout.screen_home), NavigationView.OnNavigationIt
                     }
                     is StateViewModel.Success -> {
                         state.data.reservePlaceList.let { list ->
-                            if (list.isEmpty())
-                                binding.cvReserve.isVisible = false
-                            else
-                                reserveAdapter.differ.submitList(list)
+                            val isNotEmpty = list.isNotEmpty()
+                            val isSingleItem = list.size == 1
+                            binding.cvReserve.isVisible = isNotEmpty
+                            binding.singleItemReserve.isVisible = isSingleItem
+                            binding.rvReserve.isVisible = isSingleItem.not()
+                            binding.bottomReserve.isVisible = isSingleItem.not()
+                            if (isSingleItem) {
+                                val data = list.first()
+                                binding.singleItemImageReserve.setImageResource(data.picture)
+                                binding.singleItemNameReserve.text = data.name
+                                binding.singleItemReserve.setOnClickListener {
+                                    openPlace(data.id)
+                                }
+                            } else if (isNotEmpty) reserveAdapter.differ.submitList(list)
                         }
                         state.data.shrinePlaceList.let { list ->
-                            if (list.isEmpty())
-                                binding.cvShrine.isVisible = false
-                            else
+                            val isNotEmpty = list.isNotEmpty()
+                            val isSingleItem = list.size == 1
+                            binding.cvShrine.isVisible = isNotEmpty
+                            binding.singleItemShrine.isVisible = isSingleItem
+                            binding.rvShrine.isVisible = isSingleItem.not()
+                            binding.bottomShrine.isVisible = isSingleItem.not()
+                            if (isSingleItem) {
+                                val data = list.first()
+                                binding.singleItemImageShrine.setImageResource(data.picture)
+                                binding.singleItemNameShrine.text = data.name
+                                binding.singleItemShrine.setOnClickListener {
+                                    openPlace(data.id)
+                                }
+                            } else if (isNotEmpty)
                                 shrineAdapter.differ.submitList(list)
                         }
                         state.data.nearRiverPlaceList.let { list ->
-                            if (list.isEmpty())
-                                binding.cvNearRivers.isVisible = false
-                            else
+                            val isNotEmpty = list.isNotEmpty()
+                            val isSingleItem = list.size == 1
+                            binding.cvNearRivers.isVisible = isNotEmpty
+                            binding.singleItemNearRiver.isVisible = isSingleItem
+                            binding.rvNearRivers.isVisible = isSingleItem.not()
+                            binding.bottomNearRivers.isVisible = isSingleItem.not()
+                            if (isSingleItem) {
+                                val data = list.first()
+                                binding.singleItemImageNearRiver.setImageResource(data.picture)
+                                binding.singleItemNameNearRiver.text = data.name
+                                binding.singleItemNearRiver.setOnClickListener {
+                                    openPlace(data.id)
+                                }
+                            } else if (isNotEmpty)
                                 nearRiverAdapter.differ.submitList(list)
                         }
                         state.data.nearMountainPlaceList.let { list ->
-                            if (list.isEmpty())
-                                binding.cvNearMountain.isVisible = false
-                            else
+                            val isNotEmpty = list.isNotEmpty()
+                            val isSingleItem = list.size == 1
+                            binding.cvNearMountain.isVisible = isNotEmpty
+                            binding.singleItemNearMountain.isVisible = isSingleItem
+                            binding.rvNearMountain.isVisible = isSingleItem.not()
+                            binding.bottomNearMountain.isVisible = isSingleItem.not()
+                            if (isSingleItem) {
+                                val data = list.first()
+                                binding.singleItemImageNearMountain.setImageResource(data.picture)
+                                binding.singleItemNameNearMountain.text = data.name
+                                binding.singleItemNearMountain.setOnClickListener {
+                                    openPlace(data.id)
+                                }
+                            } else if (isNotEmpty)
                                 nearMountainAdapter.differ.submitList(list)
                         }
                         state.data.landscapePlaceList.let { list ->
-                            if (list.isEmpty())
-                                binding.cvLandscape.isVisible = false
-                            else
+                            val isNotEmpty = list.isNotEmpty()
+                            val isSingleItem = list.size == 1
+                            binding.cvLandscape.isVisible = isNotEmpty
+                            binding.singleItemLandscape.isVisible = isSingleItem
+                            binding.rvLandscape.isVisible = isSingleItem.not()
+                            binding.bottomLandscape.isVisible = isSingleItem.not()
+                            if (isSingleItem) {
+                                val data = list.first()
+                                binding.singleItemImageLandscape.setImageResource(data.picture)
+                                binding.singleItemNameLandscape.text = data.name
+                                binding.singleItemLandscape.setOnClickListener {
+                                    openPlace(data.id)
+                                }
+                            } else if (isNotEmpty)
                                 landscapeAdapter.differ.submitList(list)
                         }
                         state.data.historicalBuildingPlaceList.let { list ->
-                            if (list.isEmpty())
-                                binding.cvHistoricalBuilding.isVisible = false
-                            else
+                            val isNotEmpty = list.isNotEmpty()
+                            val isSingleItem = list.size == 1
+                            binding.cvHistoricalBuilding.isVisible = isNotEmpty
+                            binding.singleItemHistoricalBuilding.isVisible = isSingleItem
+                            binding.rvHistoricalBuilding.isVisible = isSingleItem.not()
+                            binding.bottomHistoricalBuilding.isVisible = isSingleItem.not()
+                            if (isSingleItem) {
+                                val data = list.first()
+                                binding.singleItemImageHistoricalBuilding.setImageResource(data.picture)
+                                binding.singleItemNameHistoricalBuilding.text = data.name
+                                binding.singleItemHistoricalBuilding.setOnClickListener {
+                                    openPlace(data.id)
+                                }
+                            } else if (isNotEmpty)
                                 historicalBuildingAdapter.differ.submitList(list)
                         }
-                        historicalBuildingAdapter.differ.submitList(state.data.historicalBuildingPlaceList)
                     }
                 }
             }
@@ -153,6 +219,17 @@ class ScreenHome : Fragment(R.layout.screen_home), NavigationView.OnNavigationIt
 
         binding.btnSearch.setOnClickListener {
             findNavController().navigate(R.id.action_home_screen_to_screenSearch)
+        }
+        binding.btnMore.setOnClickListener {
+            val menu = PopupMenu(requireContext(), binding.btnMore)
+            menu.menuInflater.inflate(R.menu.home_popup_menu, menu.menu)
+            menu.setOnMenuItemClickListener { menuItem ->
+                when (menuItem.itemId) {
+                    R.id.notification -> showToast("Notification")
+                }
+                true
+            }
+            menu.show()
         }
         binding.btnShowAllLandscape.setOnClickListener {
             openPlaceAll(TYPE.LANDSCAPE)

@@ -1,5 +1,8 @@
 package com.example.myjourney.ui.activity
 
+import android.bluetooth.BluetoothAdapter
+import android.bluetooth.BluetoothDevice
+import android.content.IntentFilter
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +12,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.setupWithNavController
+import com.example.myjourney.broadcast.BluetoothReceiver
 import com.example.myjourney.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -18,10 +22,12 @@ class MainActivity : AppCompatActivity() {
     private val binding get() = _binding!!
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private var receiver: BluetoothReceiver? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
+        registerReceiver()
         val navHostFragment = supportFragmentManager.findFragmentById(com.example.myjourney.R.id.fragment) as NavHostFragment
         navController = navHostFragment.findNavController()
 
@@ -63,8 +69,23 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
+    private fun registerReceiver() {
+        receiver = BluetoothReceiver(this)
+        val intentFilter = IntentFilter()
+        intentFilter.addAction(BluetoothDevice.ACTION_FOUND)
+        intentFilter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED)
+        intentFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED)
+        intentFilter.addAction(BluetoothDevice.ACTION_BOND_STATE_CHANGED)
+        registerReceiver(receiver, intentFilter)
+    }
+
+    fun getReceiver(): BluetoothReceiver? {
+        return receiver
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+        unregisterReceiver(receiver)
     }
 }

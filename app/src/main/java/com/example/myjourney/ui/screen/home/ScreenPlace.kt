@@ -1,5 +1,6 @@
 package com.example.myjourney.ui.screen.home
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -53,7 +54,7 @@ class ScreenPlace : Fragment(R.layout.screen_place) {
                         binding.ivMap.setImageResource(state.data.mapImage)
                         if (!state.data.isCanAdd) {
                             binding.addBtn.setOnClickListener { }
-                            binding.addBtn.setBackgroundResource(R.color.black_80)
+                            binding.addBtn.background.setTint(Color.parseColor("#7B817F"))
                         }
                     }
                 }

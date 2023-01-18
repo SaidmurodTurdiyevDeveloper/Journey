@@ -16,56 +16,61 @@ import javax.inject.Inject
  */
 class PlaceRepositoryImpl @Inject constructor(private var places: PlaceList, private var db: JourneyDao) : PlaceRepository {
     override suspend fun getPlaceNearRiverList(regionId: Int): List<PlaceData> {
-        return places.getList().filter { data ->
+        val list = places.getList().filter { data ->
             if (regionId == -1)
                 data.type_place == TYPE.NEAR_RIVER
             else
                 data.regionId == regionId && data.type_place == TYPE.NEAR_RIVER
-        }.map { data ->
+        }
+        return list.map { data ->
             PlaceData(data.id, data.picture, data.name)
         }
     }
 
     override suspend fun getPlaceLandscapeList(regionId: Int): List<PlaceData> {
-        return places.getList().filter { data ->
+        val list = places.getList().filter { data ->
             if (regionId == -1)
                 data.type_place == TYPE.LANDSCAPE
             else
                 data.regionId == regionId && data.type_place == TYPE.LANDSCAPE
-        }.map { data ->
+        }
+        return list.map { data ->
             PlaceData(data.id, data.picture, data.name)
         }
     }
 
     override suspend fun getPlaceNearMountainList(regionId: Int): List<PlaceData> {
-        return places.getList().filter { data ->
+        val list = places.getList().filter { data ->
             if (regionId == -1)
                 data.type_place == TYPE.NEAR_MOUNTAIN
             else
                 data.regionId == regionId && data.type_place == TYPE.NEAR_MOUNTAIN
-        }.map { data ->
+        }
+        return list.map { data ->
             PlaceData(data.id, data.picture, data.name)
         }
     }
 
     override suspend fun getPlaceHistoricalBuildingList(regionId: Int): List<PlaceData> {
-        return places.getList().filter { data ->
+        val list = places.getList().filter { data ->
             if (regionId == -1)
                 data.type_place == TYPE.HISTORICAL_BUILDING
             else
                 data.regionId == regionId && data.type_place == TYPE.HISTORICAL_BUILDING
-        }.map { data ->
+        }
+        return list.map { data ->
             PlaceData(data.id, data.picture, data.name)
         }
     }
 
     override suspend fun getPlaceShrineList(regionId: Int): List<PlaceData> {
-        return places.getList().filter { data ->
+        val list=places.getList().filter { data ->
             if (regionId == -1)
                 data.type_place == TYPE.SHRINE
             else
                 data.regionId == regionId && data.type_place == TYPE.SHRINE
-        }.map { data ->
+        }
+        return list.map { data ->
             PlaceData(data.id, data.picture, data.name)
         }
     }
@@ -77,12 +82,13 @@ class PlaceRepositoryImpl @Inject constructor(private var places: PlaceList, pri
     }
 
     override suspend fun getPlaceReserveList(regionId: Int): List<PlaceData> {
-        return places.getList().filter { data ->
+        val list=places.getList().filter { data ->
             if (regionId == -1)
                 data.type_place == TYPE.RESERVE
             else
                 data.regionId == regionId && data.type_place == TYPE.RESERVE
-        }.map { data ->
+        }
+        return list.map { data ->
             PlaceData(data.id, data.picture, data.name)
         }
     }

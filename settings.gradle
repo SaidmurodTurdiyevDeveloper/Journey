@@ -15,3 +15,11 @@ dependencyResolutionManagement {
 }
 rootProject.name = "My Journey"
 include ':app'
+include ':driver:driver_data'
+include ':driver:driver_domen'
+include ':driver:driver_presenter'
+include ':passenger:passenger_data'
+include ':passenger:passenger_domen'
+include ':passenger:passenger_presenter'
+include ':common:common_utils'
+include ':common:common_data'

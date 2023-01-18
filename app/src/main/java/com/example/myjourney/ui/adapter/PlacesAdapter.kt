@@ -32,6 +32,7 @@ class PlacesAdapter() : RecyclerView.Adapter<PlacesAdapter.ViewHolder>() {
         }
     }
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemPlaceBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
@@ -40,6 +41,7 @@ class PlacesAdapter() : RecyclerView.Adapter<PlacesAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(differ.currentList[position])
 
     override fun getItemCount(): Int = differ.currentList.size
+
 
     inner class ViewHolder(private var binding: ItemPlaceBinding) : RecyclerView.ViewHolder(binding.root) {
         init {

@@ -1,6 +1,7 @@
 package com.example.myjourney.di
 
-import com.example.myjourney.other.Constants
+import com.example.common_utils.Navigator
+import com.example.myjourney.navigator.DefaultNavigator
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,9 +12,12 @@ import javax.inject.Singleton
 /**
  * Created by Saidmurod Turdiyev (S.M.T) on 12/12/2022.
  */
-@Module
 @InstallIn(SingletonComponent::class)
+@Module
 object ConstantModule {
-
-
+    @Provides
+    @Singleton
+    fun provideNavigateProvider(): Navigator.Provider {
+        return DefaultNavigator()
+    }
 }

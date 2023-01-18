@@ -7,10 +7,23 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="Embedded JDK" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/common/common_data" />
+            <option value="$PROJECT_DIR$/common/common_utils" />
+            <option value="$PROJECT_DIR$/driver" />
+            <option value="$PROJECT_DIR$/driver/driver_data" />
+            <option value="$PROJECT_DIR$/driver/driver_domen" />
+            <option value="$PROJECT_DIR$/driver/driver_presenter" />
+            <option value="$PROJECT_DIR$/passenger" />
+            <option value="$PROJECT_DIR$/passenger/passenger_data" />
+            <option value="$PROJECT_DIR$/passenger/passenger_domen" />
+            <option value="$PROJECT_DIR$/passenger/passenger_presenter" />
           </set>
         </option>
       </GradleProjectSettings>

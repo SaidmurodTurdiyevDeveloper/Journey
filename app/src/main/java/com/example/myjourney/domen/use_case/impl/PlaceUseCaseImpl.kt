@@ -19,7 +19,7 @@ class PlaceUseCaseImpl @Inject constructor(private var repositoryPlace: PlaceRep
         emit(ResponseData.Loading(true))
         try {
             val list = repositoryPlace.getPlaceNearRiverList(repositoryRegion.getCurrentRegionId())
-            if (limit in 0 until list.size)
+            if (0 < limit && limit <= list.size)
                 emit(ResponseData.Success(list.subList(0, limit)))
             else
                 emit(ResponseData.Success(list))
@@ -33,7 +33,7 @@ class PlaceUseCaseImpl @Inject constructor(private var repositoryPlace: PlaceRep
         emit(ResponseData.Loading(true))
         try {
             val list = repositoryPlace.getPlaceLandscapeList(repositoryRegion.getCurrentRegionId())
-            if (limit in 0 until list.size)
+            if (0 < limit && limit <= list.size)
                 emit(ResponseData.Success(list.subList(0, limit)))
             else
                 emit(ResponseData.Success(list))
@@ -46,7 +46,7 @@ class PlaceUseCaseImpl @Inject constructor(private var repositoryPlace: PlaceRep
         emit(ResponseData.Loading(true))
         try {
             val list = repositoryPlace.getPlaceNearMountainList(repositoryRegion.getCurrentRegionId())
-            if (limit in 0 until list.size)
+            if (0 < limit && limit <= list.size)
                 emit(ResponseData.Success(list.subList(0, limit)))
             else
                 emit(ResponseData.Success(list))
@@ -59,7 +59,7 @@ class PlaceUseCaseImpl @Inject constructor(private var repositoryPlace: PlaceRep
         emit(ResponseData.Loading(true))
         try {
             val list = repositoryPlace.getPlaceHistoricalBuildingList(repositoryRegion.getCurrentRegionId())
-            if (limit in 0 until list.size)
+            if (0 < limit && limit <= list.size)
                 emit(ResponseData.Success(list.subList(0, limit)))
             else
                 emit(ResponseData.Success(list))
@@ -72,7 +72,7 @@ class PlaceUseCaseImpl @Inject constructor(private var repositoryPlace: PlaceRep
         emit(ResponseData.Loading(true))
         try {
             val list = repositoryPlace.getPlaceShrineList(repositoryRegion.getCurrentRegionId())
-            if (limit in 0 until list.size)
+            if (0 < limit && limit <= list.size)
                 emit(ResponseData.Success(list.subList(0, limit)))
             else
                 emit(ResponseData.Success(list))

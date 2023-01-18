@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    //regions
+    <string name="text_andijon">Andijon</string>
+    <string name="text_fergana">Farg`ona</string>
+    <string name="text_namangan">Namngan</string>
+    <string name="text_tashkent">Toshken</string>
+    <string name="text_jizzakh">Jizzax</string>
+    <string name="text_sirdaryo">Sirdaryo</string>
+    <string name="text_samarkand">Samarqand</string>
+    <string name="text_qashqadaro">Qashqadaryo</string>
+    <string name="text_surkhandaryo">Surxondaryo</string>
+    <string name="text_navoi">Navoi</string>
+    <string name="text_bukhara">Buxoro</string>
+    <string name="text_khorazm">Xorazm</string>
+    <string name="text_qoraqalpoq">Qoraqalpog`iston</string>
+    <string name="text_uzbekistan">O`zbekiston</string>
+
+    <string name="text_andijon_description">andijon info</string>
+    <string name="text_fergana_description">farg`ona info</string>
+    <string name="text_namangan_description">namngan info</string>
+    <string name="text_tashkent_description">toshken info</string>
+    <string name="text_jizzakh_description">jizzax info</string>
+    <string name="text_sirdaryo_description">sirdaryo info</string>
+    <string name="text_samarkand_description">samarqand info</string>
+    <string name="text_qashqadaro_description">qashqadaryo info</string>
+    <string name="text_surkhandaryo_description">surxondaryo info</string>
+    <string name="text_navoi_description">navoi info</string>
+    <string name="text_bukhara_description">buxoro info</string>
+    <string name="text_khorazm_description">xorazm info</string>
+    <string name="text_qorqalpoq_description">qoraqalpog`iston info</string>
+    <string name="text_uzbekistan_description">o`zbekiston info</string>
+
+
+    <string name="text_registon">Registon</string>
+    <string name="text_registon_description">Registon description</string>
+</resources>

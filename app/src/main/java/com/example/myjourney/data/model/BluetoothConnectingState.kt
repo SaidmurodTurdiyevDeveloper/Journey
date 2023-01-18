@@ -1,6 +1,6 @@
 package com.example.myjourney.data.model
 
-import com.example.myjourney.server.SendRecive
+import com.example.myjourney.bluetooth.server.SendRecive
 
 
 /**

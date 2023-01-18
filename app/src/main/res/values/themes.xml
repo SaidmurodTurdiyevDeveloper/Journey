@@ -21,7 +21,7 @@
 
     <style name="Rectangle">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">14dp</item>
+        <item name="cornerSize">6dp</item>
     </style>
 
     <style name="AppBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
