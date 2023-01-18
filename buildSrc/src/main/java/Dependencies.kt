@@ -4,7 +4,7 @@
 object Versions {
     //deps
     const val core = "1.9.0"
-    const val appCompat = "1.5.1"
+    const val appCompat = "1.6.0"
     const val material = "1.7.0"
     const val constraint = "2.1.4"
     const val legacy = "1.0.0"
@@ -15,7 +15,7 @@ object Versions {
 
     //androidTest
     const val android_JUnit = "1.1.5"
-    const val espresso = ""
+    const val espresso = "3.5.1"
 
     //lifeCycle
     const val lifeCycle = "2.5.1"
@@ -30,7 +30,7 @@ object Versions {
 
     //imageLoader
     const val glide = "4.14.2"
-    const val picasso="2.71828"
+    const val picasso="2.8"
 
     //coroutine
     const val coroutine = "1.6.4"

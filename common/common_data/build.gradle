@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.common_data'
+    namespace 'com.journey.common_data'
     compileSdk 33
 
     defaultConfig {

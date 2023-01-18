@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.passenger_presenter'
+    namespace 'com.journey.passenger_presenter'
     compileSdk 33
 
     defaultConfig {

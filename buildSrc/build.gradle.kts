@@ -7,6 +7,7 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
 }
 repositories {
+    google()
     mavenCentral()
 }
 val compileKotlin: KotlinCompile by tasks

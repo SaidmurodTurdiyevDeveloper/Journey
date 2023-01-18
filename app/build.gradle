@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.myjourney'
+    namespace 'com.journey.myjourney'
     compileSdk 33
 
     defaultConfig {
