@@ -31,7 +31,6 @@ android {
     }
     buildFeatures {
         viewBinding = true
-        compose = true
     }
 
     composeOptions {
@@ -50,44 +49,20 @@ dependencies {
     implementation project(":driver:driver_presenter")
     implementation project(":passenger:passenger_presenter")
     implementation project(":common:common_utils")
+
     implementation Deps.core
-    implementation Deps.appCompat
+    implementation Deps.app_compat
     implementation Deps.material
-    implementation Deps.constraint
+    implementation Deps.constraint_layoyt
     implementation Deps.legacy
     implementation LifeCycle.livedata
-    testImplementation Tests.jUnit
-    androidTestImplementation AndroidTest.jUnit
+    testImplementation Tests.j_unit
+    androidTestImplementation AndroidTest.j_unit
     androidTestImplementation AndroidTest.espresso
 
-    implementation LifeCycle.viewModel
-    implementation LifeCycle.viewModelKtx
-
-
-    implementation ComposeDeps.activity
-    implementation ComposeDeps.ui
-    implementation ComposeDeps.uiTooling
-    androidTestImplementation AndroidTest.composeJUnit
-    debugImplementation DebugDeps.composeUiTooling
-    implementation ComposeDeps.material3
-    debugImplementation DebugDeps.composeUiManifest
-
-    //  Navigation
-    implementation Navigation.fragment
-    implementation Navigation.ui
 
     //Timber
     implementation Deps.timber
-
-    //picasso
-    implementation ImageLoader.picasso
-
-    //Glide
-//    implementation 'com.github.corouteam:GlideToVectorYou:v2.0.0'
-    implementation ImageLoader.glide
-    implementation ImageLoader.glideAnnotation
-    implementation ImageLoader.glideIntegration
-    annotationProcessor ImageLoader.glideCompiler
 
 
     //Coroutines
@@ -102,48 +77,11 @@ dependencies {
 
 
     // Hilt dependencies
-    implementation Hilt.android
-    kapt Hilt.compiler
+    implementation Dagger.hilt
+    kapt Dagger.hilt_compiler
 
-
-    //Dexter
-    implementation Permission.dexter
-
-
-    // Room
-    implementation Room.runtime
-    annotationProcessor Room.compiler
-    // To use Kotlin annotation processing tool (kapt)
-    kapt Room.compiler
-    // optional - Kotlin Extensions and Coroutines support for Room
-    implementation Room.ktx
-    // optional - Guava support for Room, including Optional and ListenableFuture
-    implementation Room.guavu
-
-    //Paging
-    implementation Paging.runtime
-    // alternatively - without Android dependencies for tests
-    testImplementation Paging.common
-    // optional - RxJava2 support
-    implementation Paging.rxJava2
-    // optional - RxJava3 support
-    implementation Paging.rxJava3
-    // optional - Guava ListenableFuture support
-    implementation Paging.guavu
-    // optional - Jetpack Compose integration
-    implementation Paging.compose
 
     //slidView
-    implementation SplashDeps.circleIndicator
-    implementation Carousel.imageCarousel
-    //expansion panel
-    implementation Expansion.expansionPanel
-
-    //compressor
-    implementation Image.compressor
-
-    //dotsindicator
-    implementation SplashDeps.dotsIndicator
-
+    implementation SplashDeps.circle_indicator
 
 }

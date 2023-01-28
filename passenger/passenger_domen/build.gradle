@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -31,10 +33,24 @@ android {
 }
 
 dependencies {
+    implementation project(":passenger:passenger_data")
+    implementation project(":common:common_data")
+
     implementation Deps.core
-    implementation Deps.appCompat
+    implementation Deps.app_compat
     implementation Deps.material
-    testImplementation Tests.jUnit
-    androidTestImplementation AndroidTest.jUnit
+    testImplementation Tests.j_unit
+    androidTestImplementation AndroidTest.j_unit
     androidTestImplementation AndroidTest.espresso
+    //Timber
+    implementation Deps.timber
+    // Hilt dependencies
+    implementation Dagger.hilt
+    kapt Dagger.hilt_compiler
+
+    //Coroutines
+    implementation Coroutine.core
+    implementation Coroutine.android
+    // Coroutine Lifecycle scope
+    implementation LifeCycle.runtime
 }

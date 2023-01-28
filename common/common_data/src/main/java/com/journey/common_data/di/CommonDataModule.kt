@@ -1,10 +1,10 @@
 package com.journey.common_data.di
 
 import android.content.Context
-import com.journey.common_data.source.local.default.AdvertiseList
-import com.journey.common_data.source.local.default.DefaultLocalStore
-import com.journey.common_data.source.local.default.PlaceList
-import com.journey.common_data.source.local.default.RegionList
+import com.journey.common_data.source.local.default.DefaultAdvertiseList
+import com.journey.common_data.source.local.default.DefaultPlaceList
+import com.journey.common_data.source.local.default.DefaultRegionList
+import com.journey.common_data.source.local.shared.SharedDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,16 +20,30 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object CommonDataModule {
 
+//    @Provides
+//    @Singleton
+//    fun providesDefaultLocalStore(
+//        @ApplicationContext context: Context
+//    ): DefaultRegionList {
+//        return DefaultRegionList(context)
+//    }
+//
+//    @Provides
+//    @Singleton
+//    fun provideDefaultAdvertiseList(): DefaultAdvertiseList {
+//        return DefaultAdvertiseList()
+//    }
+//
+//    @Provides
+//    @Singleton
+//    fun provideDefaultPlaceList(@ApplicationContext context: Context): DefaultPlaceList {
+//        return DefaultPlaceList(context)
+//    }
+
     @Provides
     @Singleton
-    fun providesDefaultLocalStore(
-        @ApplicationContext
-        context: Context
-    ): DefaultLocalStore {
-        return DefaultLocalStore(
-            advertiseList = AdvertiseList(context),
-            placeList = PlaceList(context),
-            regionList = RegionList(context)
-        )
-    }
+    fun provideSharedDatabase(@ApplicationContext context: Context): SharedDatabase =
+        SharedDatabase(context)
+
+
 }

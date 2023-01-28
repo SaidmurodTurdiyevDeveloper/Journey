@@ -14,32 +14,4 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-
-    <style name="Circular">
-        <item name="cornerSize">50%</item>
-    </style>
-
-    <style name="Rectangle">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">6dp</item>
-    </style>
-
-    <style name="AppBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
-        <item name="colorPrimary">@color/blue</item>
-    </style>
-
-    <style name="AppBottomSheetDialogThemeForMap" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
-        <item name="android:state_enabled">false</item>
-        <item name="state_dragged">false</item>
-        <item name="state_collapsible">false</item>
-        <item name="state_liftable">false</item>
-        <item name="state_collapsed">false</item>
-    </style>
-
-    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/bottom_sheet</item>
-        <item name="colorPrimary">@color/blue</item>
-    </style>
 </resources>

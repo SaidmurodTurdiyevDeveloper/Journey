@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/home_screen">
+
+    <fragment
+        android:id="@+id/home_screen"
+        android:name="com.journey.passenger_presenter.screen.home.ScreenHome"
+        android:label="ScreenHome" >
+        <action
+            android:id="@+id/action_home_screen_to_screenSearch"
+            app:destination="@id/screenSearch" />
+        <action
+            android:id="@+id/action_home_screen_to_screenPlace"
+            app:destination="@id/screenPlace" />
+        <action
+            android:id="@+id/action_home_screen_to_screenPlaceWithType"
+            app:destination="@id/screenPlaceWithType" />
+    </fragment>
+    <fragment
+        android:id="@+id/journey_screen"
+        android:name="com.journey.passenger_presenter.screen.journey.ScreenJourney"
+        android:label="ScreenJourney" />
+    <fragment
+        android:id="@+id/screenAbout"
+        android:name="com.journey.passenger_presenter.screen.setting.ScreenAbout"
+        android:label="ScreenAbout" />
+    <fragment
+        android:id="@+id/screenConnectionBluetooth"
+        android:name="com.journey.passenger_presenter.screen.setting.ScreenConnectionBluetooth"
+        android:label="ScreenConnectionBluetooth" />
+    <fragment
+        android:id="@+id/screenHelp"
+        android:name="com.journey.passenger_presenter.screen.setting.ScreenHelp"
+        android:label="ScreenHelp" />
+    <fragment
+        android:id="@+id/screenLanguage"
+        android:name="com.journey.passenger_presenter.screen.setting.ScreenLanguage"
+        android:label="ScreenLanguage" />
+    <fragment
+        android:id="@+id/screenPlace"
+        android:name="com.journey.passenger_presenter.screen.home.ScreenPlace"
+        android:label="ScreenPlace" />
+    <fragment
+        android:id="@+id/screenSearch"
+        android:name="com.journey.passenger_presenter.screen.home.ScreenSearch"
+        android:label="ScreenSearch" />
+    <fragment
+        android:id="@+id/setting_screen"
+        android:name="com.journey.myjourney.ui.screen.setting.ScreenSetting"
+        android:label="ScreenSetting" >
+        <action
+            android:id="@+id/action_setting_screen_to_screenLanguage"
+            app:destination="@id/screenLanguage" />
+        <action
+            android:id="@+id/action_setting_screen_to_screenConnectionBluetooth"
+            app:destination="@id/screenConnectionBluetooth" />
+        <action
+            android:id="@+id/action_setting_screen_to_screenHelp"
+            app:destination="@id/screenHelp" />
+        <action
+            android:id="@+id/action_setting_screen_to_screenAbout"
+            app:destination="@id/screenAbout" />
+    </fragment>
+    <fragment
+        android:id="@+id/service_screen"
+        android:name="com.journey.passenger_presenter.screen.service.ServiceScreen"
+        android:label="ServiceScreen" />
+    <fragment
+        android:id="@+id/screenPlaceWithType"
+        android:name="com.journey.passenger_presenter.screen.home.ScreenPlaceWithType"
+        android:label="ScreenPlaceWithType" />
+</navigation>

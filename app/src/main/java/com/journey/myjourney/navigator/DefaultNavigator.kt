@@ -1,7 +1,7 @@
 package com.journey.myjourney.navigator
 
-import com.journey.common_utils.Activities
-import com.journey.common_utils.Navigator
+import com.journey.common_utils.activity.Activities
+import com.journey.common_utils.navigator.Navigator
 import com.journey.driver_presenter.GoToDriverActivity
 import com.journey.passenger_presenter.GoToPassengerActivity
 
@@ -9,12 +9,12 @@ import com.journey.passenger_presenter.GoToPassengerActivity
  * Created by Saidmurod Turdiyev (S.M.T) on 1/7/2023.
  */
 class DefaultNavigator : Navigator.Provider {
-    override fun getActivities(activities: com.journey.common_utils.Activities): Navigator {
+    override fun getActivities(activities: Activities): Navigator {
         return when (activities) {
-            com.journey.common_utils.Activities.PassengerActivity -> {
+            Activities.PassengerActivity -> {
                 GoToPassengerActivity
             }
-            com.journey.common_utils.Activities.DriverActivity -> {
+            Activities.DriverActivity -> {
                 GoToDriverActivity
             }
         }

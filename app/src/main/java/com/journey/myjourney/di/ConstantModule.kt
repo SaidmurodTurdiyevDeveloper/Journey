@@ -1,6 +1,6 @@
 package com.journey.myjourney.di
 
-import com.journey.common_utils.Navigator
+import com.journey.common_utils.navigator.Navigator
 import com.journey.myjourney.navigator.DefaultNavigator
 import dagger.Module
 import dagger.Provides

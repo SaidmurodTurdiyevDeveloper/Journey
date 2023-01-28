@@ -16,7 +16,7 @@ data class PlaceDTO(
     @DrawableRes val mapImage: Int,
     val regionId: Int,
     val type_place: TYPE,
-    var isCanAdd: Boolean = true
+    var isGone: Boolean? = null
 )
 
 enum class TYPE : Parcelable {

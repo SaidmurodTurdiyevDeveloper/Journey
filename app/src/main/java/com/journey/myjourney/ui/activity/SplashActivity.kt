@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.journey.myjourney.R
-import com.journey.myjourney.other.extention.showToast
+import com.journey.common_utils.other.extention.showToast
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -30,7 +30,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun startMainActivity() {
-        val intent = Intent(this@SplashActivity, MainActivity::class.java)
+        val intent = Intent(this@SplashActivity, StartingActivity::class.java)
         startActivity(intent)
     }
 }

@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -28,16 +30,48 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation project(":common:common_utils")
+    implementation project(":passenger:passenger_domen")
 
     implementation Deps.core
-    implementation Deps.appCompat
+    implementation Deps.app_compat
     implementation Deps.material
-    implementation Deps.constraint
-    testImplementation Tests.jUnit
-    androidTestImplementation AndroidTest.jUnit
+    testImplementation Tests.j_unit
+    androidTestImplementation AndroidTest.j_unit
     androidTestImplementation AndroidTest.espresso
+    //Timber
+    implementation Deps.timber
+    // Hilt dependencies
+    implementation Dagger.hilt
+    kapt Dagger.hilt_compiler
+    //navigation
+    implementation Navigation.fragment
+    implementation Navigation.module_support
+    implementation Navigation.ui
+    //expansion panel
+    implementation Expansion.expansion_panel
+    //indicator
+    implementation SplashDeps.dots_indicator
+    //carousel
+    implementation Carousel.image_carousel
+
+    //viewBinding
+    implementation ViewBinding.delegate
+    implementation ViewBinding.noreflection
+
+    //Coroutines
+    implementation Coroutine.core
+    implementation Coroutine.android
+    // Coroutine Lifecycle scope
+    implementation LifeCycle.runtime
+    //Dexter
+    implementation Permission.dexter
+    //LifeCycle
+    implementation LifeCycle.view_model_ktx
 }

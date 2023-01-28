@@ -1,1 +1,26 @@
-<resources></resources>
+<resources>
+    <string name="image_item">Image</string>
+    <string name="text_add">Add</string>
+    <string name="text_camp">Oromgohlar</string>
+    <string name="text_historical_building">Tarixiy obidalar</string>
+    <string name="text_all">Hammasi</string>
+    <string name="text_close">Yopish</string>
+    <string name="text_help">Yordam</string>
+    <string name="text_language">Dastur tili</string>
+    <string name="text_about">Dastur haqida</string>
+    <string name="text_log_out">Chiqish</string>
+    <string name="text_home">Home</string>
+    <string name="text_journey">Journey</string>
+    <string name="text_setting">Setting</string>
+    <string name="text_service">Service</string>
+    <string name="text_search">Qidiruv</string>
+
+
+    <string name="text_notification">Eslatmalar</string>
+    <string name="text_notifications">Notifications</string>
+    <string name="text_title_near_rivers">Daryo bo`ylari</string>
+    <string name="text_title_landscape">Manzarali joylar</string>
+    <string name="text_title_near_mountain">Tog` oldi maskanlar</string>
+    <string name="text_title_shrine">Ziyorotgohlar</string>
+    <string name="text_title_reserve">Qo`riqxonalar</string>
+</resources>
